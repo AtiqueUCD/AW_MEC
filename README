@@ -15,7 +15,7 @@ docker run --rm --network=my_socket_ipc_network my_ipc_client_2
 docker build -t my_ipc_server_2 .
 
 #run the client container
-'''bash
+bash'''
 docker run --rm --network=my_socket_ipc_network my_ipc_server_2
 '''
 
