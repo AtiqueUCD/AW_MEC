@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Image</title>
+</head>
+<body>
+    <h1>Upload Image for Processing</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+    <div style="display: flex; justify-content: space-around;">
+        {% if original_image %}
+            <div>
+                <h2>Original Image:</h2>
+                <img src="data:image/jpeg;base64,{{ original_image }}" alt="Original Image"/>
+            </div>
+        {% endif %}
+        {% if processed_image %}
+            <div>
+                <h2>Processed Image:</h2>
+                <img src="data:image/jpeg;base64,{{ processed_image }}" alt="Processed Image"/>
+            </div>
+        {% endif %}
+    </div>
+    {% if processing_time %}
+        <h2>Last Processing Time: {{ processing_time }}</h2>
+    {% else %}
+        <h2>No processing time available</h2>
+    {% endif %}
+</body>
+</html>
