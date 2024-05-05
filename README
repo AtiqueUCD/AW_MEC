@@ -15,4 +15,14 @@ docker run --rm --network=my_socket_ipc_network my_ipc_client_2
 docker build -t my_ipc_server_2 .
 
 #run the client container
+'''bash
 docker run --rm --network=my_socket_ipc_network my_ipc_server_2
+'''
+
+
+Scenario 2:
+web-server image : https://hub.docker.com/layers/emileaydar/server-website/latest/images/sha256:474b521c03696ab7c5e70932427255be485b047e9a70d096a04f35e1bfe7c560?uuid=55BE106B-BF1F-4A3E-8FF4-05A4AC964841
+web-proxy image : https://hub.docker.com/layers/emileaydar/proxy/latest/images/sha256:7be69663281d11a997b9f96ebaab92524acca32a9f8251dad30026206beeb9cb?uuid=55BE106B-BF1F-4A3E-8FF4-05A4AC964841
+web-client1 image : https://hub.docker.com/layers/emileaydar/client1-website/latest/images/sha256:bdbdb0c972bf58445e5fca9381a0c96c477730fb2f3f2e0544c18e2e22a923f6?uuid=55BE106B-BF1F-4A3E-8FF4-05A4AC964841
+web-client2 image : https://hub.docker.com/layers/emileaydar/client2-website/latest/images/sha256:2d7b5421723fa9b024763e1c31dc9f8b69bc3896fb6f200678f8d13a54d4ca48?uuid=55BE106B-BF1F-4A3E-8FF4-05A4AC964841
+web-client3 image : https://hub.docker.com/layers/emileaydar/client3-website/latest/images/sha256:446bbf86565c477b955188b0f9f5de6b9a1876d9f60a164a8fcfa31233d16901?uuid=55BE106B-BF1F-4A3E-8FF4-05A4AC964841
